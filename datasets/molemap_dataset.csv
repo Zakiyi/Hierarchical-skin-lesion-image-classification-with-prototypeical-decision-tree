@@ -1,0 +1,12 @@
+name,label,is_train
+benign_other_scar_/MIC.POL/MMNZ09477.23971594.MIC.20190726111833846.POL.png,benign:other:scar,1
+malignant_bcc_basal cell carcinoma_/MIC.POL/ASPE01006.24600446.MIC.20140917112822654.POL.png,malignant:bcc:basal cell carcinoma,1
+benign_keratinocytic_seborrhoeic_common/MIC.POL/VREG00144.26420358.MIC.20170119095734392.POL.png,benign:keratinocytic:seborrhoeic,1
+malignant_keratinocytic_actinic_common/MIC.POL/HAWK10780.13040930.MIC.20161012100720905.POL.png,malignant:keratinocytic:actinic,1
+benign_melanocytic_atypical/MIC.POL/VSK200309.47530432.MIC.20130724115605617.POL.png,benign:melanocytic:atypical,0
+benign_keratinocytic_seborrhoeic_common/MIC.POL/AP1300095.46761120.MIC.20191023180006333.POL.png,benign:keratinocytic:seborrhoeic,1
+malignant_keratinocytic_actinic_common/MIC.POL/NELS00125.15380180.MIC.20150211135736668.POL.png,malignant:keratinocytic:actinic,1
+benign_keratinocytic_seborrhoeic_common/MIC.POL/PNOR10165.14850418.MIC.20180329135908104.POL.png,benign:keratinocytic:seborrhoeic,1
+malignant_keratinocytic_actinic_common/MIC.POL/TAUR18538.44930126.MIC.20160419121359296.POL.png,malignant:keratinocytic:actinic,1
+benign_melanocytic_dermal_/MIC.POL/MMAU01675.34090532.MIC.20141202124833469.POL.png,benign:melanocytic:dermal,1
+benign_melanocytic_compound_/MIC.POL/MMNZ18854.35360441.MIC.20160218143155935.POL.png,benign:melanocytic:compound,1
