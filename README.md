@@ -9,9 +9,7 @@ Ensure that your dataset is structured as a **CSV file** and placed in the `data
 - Corresponding labels
 
 ### **2. Download Model Weights**
-The pre-trained model weights can be downloaded from the following link:
-
-[Model Weights](https://drive.google.com/file/d/11w6_3kdFReIP0jS6017VwXVa555A1qKn/view?usp=sharing)
+The pre-trained model weights can be downloaded from [Model Weights](https://drive.google.com/file/d/11w6_3kdFReIP0jS6017VwXVa555A1qKn/view?usp=sharing)
 
 After downloading, place the model weights in the `model_weight/` directory before running any inference or training scripts.
 
