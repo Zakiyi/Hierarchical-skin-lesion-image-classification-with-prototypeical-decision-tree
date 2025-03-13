@@ -14,7 +14,7 @@ The pre-trained model weights can be downloaded from [Model Weights (ResNet34)](
 After downloading, place the model weights in the `model_weight/` directory before running any inference or training scripts.
 
 ### **Running Inference**
-To run inference using the trained model, execute the inference.py
+To run inference using the trained model, simply execute the inference.py
 
 
 ### Training your model
