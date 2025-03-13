@@ -29,7 +29,12 @@ python main_train.py --metric-guided --loss SoftTreeSupLoss --batch-size 80 --lr
 * `--batch-size 80` : Sets batch size to 80.
 * `--lr-backbone 3e-5` : Learning rate for the backbone.
 * `--hierarchy preset-noprune` : Uses a pre-set hierarchy without pruning.
-* `--xwe 0` : Experimental weight embedding (set to 0 for default behavior).
+* `--alpha 0.4`  : Factor for icd loss.
+* `--beta 0.5`  : Factor for metric guided loss.
+* `--xw 1` : Weight for cross entropy term.
+* `--xwe 0` : Weight for cross entropy term at end of training.
+* `--tsw 1` : Weight assigned to tree supervision losses.
+* `--tswe 1` : Weight assigned to tree supervision losses at end of training.
 * `--analysis SoftEmbeddedDecisionRules` : Enables decision rule analysis.
 * `--device "cuda:0"` : Specifies GPU usage (change to "cpu" if needed).
 
