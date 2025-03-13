@@ -9,11 +9,10 @@ from _collections import OrderedDict
 
 
 class RandomMaskOut(torch.nn.Module):
-    def __init__(self, max_holes=10, max_height=10, max_width=10, min_holes=None, min_height=None,
-                 min_width=None, fill_value=0, mask_fill_value=None, always_apply=False, p=0.5):
+    def __init__(self, p=0.5):
         super().__init__()
-        self.transform = A.CoarseDropout(max_holes, max_height, max_width, min_holes, min_height, min_width,
-                                         fill_value, mask_fill_value, always_apply, p)
+        # "random", "random_uniform", "inpaint_telea", "inpaint_ns"
+        self.transform = A.CoarseDropout(num_holes_range=(1, 3), hole_height_range=(0.05,0.15), hole_width_range=(0.05, 0.15), fill="random", p=p)
 
     def __call__(self, image):
         image = np.array(image)
@@ -37,9 +36,11 @@ class RandomGaussianBlur(torch.nn.Module):
 
 
 class RandomGaussianNoise(torch.nn.Module):
-    def __init__(self, var_limit=(10.0, 30.0), mean=0, per_channel=True, always_apply=False, p=0.5):
+    def __init__(self, var_limit=(0.01, 0.1), mean=0, per_channel=True, always_apply=False, p=0.5):
+        self.transform = A.GaussNoise(var_limit=var_limit, mean=mean, per_channel=per_channel, always_apply=always_apply, p=p)
+    # def __init__(self, var_limit=(10.0, 30.0), mean=0, per_channel=True, always_apply=False, p=0.5):
         super().__init__()
-        self.transform = A.GaussNoise(var_limit, mean, per_channel, always_apply, p)
+    #     self.transform = A.GaussNoise(var_limit, mean, per_channel, always_apply, p)
 
     def __call__(self, image):
         image = np.array(image)
@@ -47,7 +48,6 @@ class RandomGaussianNoise(torch.nn.Module):
         image = PIL.Image.fromarray(image)
 
         return image
-
 
 class Augmentations:
     def __init__(self, size, is_train=False):
