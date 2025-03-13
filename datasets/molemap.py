@@ -52,6 +52,7 @@ class MolemapDataset(Dataset):
         print('total samples number is: ', len(self.paths))
         
         if not test_mode:
+            # split the csv data (is_train==1) into training and validation
             val_index = np.linspace(0, len(self.paths), len(self.paths) // 5, endpoint=False, dtype=int)
             train_index = np.setdiff1d(np.arange(len(self.paths)), val_index)
 
