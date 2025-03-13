@@ -19,8 +19,9 @@ To run inference using the trained model, execute the inference.py
 
 ## Training the Model
 If you want to train the model from scratch or fine-tune it, run:
+```bash
 python main_train.py --metric-guided --loss SoftTreeSupLoss --batch-size 80 --lr-backbone 3e-5 --hierarchy preset-noprune --xwe 0 --analysis SoftEmbeddedDecisionRules --device "cuda:0"
-
+```
 # to do
 1. add instruction to build tree graph
 2. add jupyter notebook for inference with hierarchy output
